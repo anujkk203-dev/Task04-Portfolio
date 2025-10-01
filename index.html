@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="task04.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SAMAPTI DAS</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <img src="C:\Users\tanus\OneDrive\Documents\photo me.jpg" alt="My Photo" class="profile-box">
+      </div>
+      <div class="hero-right">
+        <h2>Hello, It's Me</h2>
+        <h1>Samapti Das</h1>
+        <h2>And I'm a Front-end Developer</h2>
+        <p>Web Developer | Designer | Learner</p>
+        <a href="#about" class="btn">See More...</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>Hello! I’m Samapti Das. I am a passionate Front-End Developer skilled in building responsive, user-friendly, and visually appealing websites. I enjoy turning ideas into interactive web experiences using HTML, CSS, JavaScript, and React.</p>
+      <div class="about-details">
+        <div class="detail">
+          <h3>Education</h3>
+          <p>Bachelor’s of Computer Science</p>
+        </div>
+        <div class="detail">
+          <h3>Experience</h3>
+          <p>Internship Prodigy Infotech</p>
+        </div>
+        <div class="detail">
+          <h3>Skills</h3>
+          <p>HTML, CSS, JS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="projects-container">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Responsive Landing Page</h3>
+          <p>A sleek, mobile-friendly landing page that adapts seamlessly to any screen.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Tic-Tac-Toe Game</h3>
+          <p>An interactive Tic-Tac-Toe game built using JavaScript.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+
+        <!-- Stopwatch Project -->
+        <div class="project-card">
+          <h3>Stopwatch</h3>
+          <p>Simple, sleek stopwatch to track time in hours, minutes, and seconds.</p>
+          <div class="stopwatch">
+            <h2 id="timeDisplay">00:00:00</h2>
+            <button id="startStopBtn" class="btn-small">Start</button>
+            <button id="resetBtn" class="btn-small">Reset</button>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A dynamic app that shows real-time weather updates using OpenWeather API.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="task04.js"></script>
+</body>
+</html>
