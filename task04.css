@@ -1,18 +1,24 @@
 /* Reset */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #0d0d0d;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* Navigation Header */
+/* Header / Navbar */
 header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.6);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
 
@@ -27,7 +33,7 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   color: cyan;
-  text-shadow: 0 0 5px cyan, 0 0 10px rgb(18, 10, 125);
+  text-shadow: 0 0 5px cyan, 0 0 10px blue;
 }
 
 .nav-links {
@@ -46,7 +52,7 @@ header {
 
 .nav-links li a:hover {
   color: cyan;
-  text-shadow: 0 0 10px cyan, 0 0 20px rgb(39, 8, 131);
+  text-shadow: 0 0 10px cyan, 0 0 20px blue;
 }
 
 /* Hero Section */
@@ -56,13 +62,13 @@ header {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #000428, #011d54);
-  margin-top: 70px; /* space for fixed header */
+  margin-top: 70px;
 }
 
 .hero-container {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   width: 80%;
   max-width: 1100px;
   gap: 40px;
@@ -106,6 +112,7 @@ p {
   color: #ddd;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -146,8 +153,8 @@ p {
 .about p {
   font-size: 1.1rem;
   margin-bottom: 40px;
-  color: #ddd;
   line-height: 1.6;
+  color: #ddd;
 }
 
 .about-details {
@@ -155,6 +162,15 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.detail {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  box-shadow: 0 0 10px cyan, 0 0 20px blue;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .detail:hover {
@@ -174,9 +190,8 @@ p {
 /* Projects Section */
 .projects {
   padding: 100px 20px;
-  background: #0d0d0d;
-  color: #fff;
   text-align: center;
+  background: #0d0d0d;
 }
 
 .projects-container {
@@ -222,34 +237,40 @@ p {
   margin-bottom: 15px;
 }
 
+/* Stopwatch inside project */
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#timeDisplay {
+  font-size: 2rem;
+  color: cyan;
+}
+
 .btn-small {
-  display: inline-block;
-  margin: 5px 5px 0 0;
   padding: 8px 15px;
   background: rgb(28, 38, 221);
-  color: #000;
-  text-decoration: none;
+  color: #fff;
+  border: none;
   border-radius: 20px;
-  font-size: 0.9rem;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .btn-small:hover {
   background: #00eeff;
+  color: #000;
   transform: scale(1.05);
 }
 
 /* Contact Section */
 .contact {
   padding: 100px 20px;
-  background: #0a0a0a;
-  color: #fff;
   text-align: center;
-}
-
-.contact-container {
-  max-width: 600px;
-  margin: auto;
+  background: #0a0a0a;
 }
 
 .contact h2 {
@@ -263,6 +284,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 600px;
+  margin: auto;
 }
 
 .contact input,
@@ -272,58 +295,21 @@ p {
   border: 2px solid cyan;
   background: #111;
   color: #fff;
-  resize: none;
 }
 
 .contact input:focus,
 .contact textarea:focus {
   outline: none;
   box-shadow: 0 0 10px cyan;
-  border-color: cyan;
 }
 
-.contact button {
-  padding: 12px;
-  border-radius: 30px;
-  border: none;
-  background: cyan;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 10px cyan, 0 0 20px blue;
-}
-
-.contact button:hover {
-  background: #00f0ff;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px cyan, 0 0 40px blue;
-}
-
-/* Stopwatch inside Projects */
-.stopwatch {
-  margin-top: 15px;
-  text-align: center;
-}
-
-#timeDisplay {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: cyan;
-  text-shadow: 0 0 10px cyan, 0 0 20px blue;
-}
-
-.stopwatch button {
-  margin: 5px;
-}
-
-/* Responsive (Mobile) */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .hero-right {
     margin-top: 20px;
   }
@@ -336,13 +322,12 @@ p {
     gap: 15px;
   }
 
-  .about-details, .project-cards {
+  .project-cards {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
 
-  .profile-box {
-    width: 200px;
-    height: 250px;
+  .about-details {
+    flex-direction: column;
   }
 }
